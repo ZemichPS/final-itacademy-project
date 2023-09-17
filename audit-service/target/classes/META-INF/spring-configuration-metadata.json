@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "by.itacademy.auditservice.config.properites.JWTProperty",
+      "sourceType": "by.itacademy.auditservice.config.properites.JWTProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.issuer",
+      "type": "java.lang.String",
+      "sourceType": "by.itacademy.auditservice.config.properites.JWTProperty"
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "by.itacademy.auditservice.config.properites.JWTProperty"
+    },
+    {
+      "name": "jwt.system",
+      "type": "java.lang.String",
+      "sourceType": "by.itacademy.auditservice.config.properites.JWTProperty"
+    },
+    {
+      "name": "jwt.user",
+      "type": "java.lang.String",
+      "sourceType": "by.itacademy.auditservice.config.properites.JWTProperty"
+    }
+  ],
+  "hints": []
+}

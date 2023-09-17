@@ -1,0 +1,77 @@
+# SERVER config
+server:
+  port: 8081
+
+# SPRING config
+spring:
+
+# APPLICATION
+  application:
+    name: user-service
+    enabled: true
+
+# CONFIG
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# datasource config
+
+  datasource:
+    hikari:
+      schema: app
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: postgres
+      auto-commit: true
+      maximum-pool-size: 20
+    url: jdbc:postgresql://localhost:5432/userservicedb
+
+# JPA config
+
+  jpa:
+    show-sql: false
+# JACKSON config
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+      write-enums-using-to-string: false
+# CLOUD config
+
+  cloud:
+    discovery:
+      enabled: true
+
+# KAFKA config
+  kafka:
+    bootstrap-servers: localhost:9092
+
+# management config
+management:
+
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# EUREKA config
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+
+
+# SPRING SECURITY
+#jwt:
+#  secret: y9ZZPyxQTtr9Qd2rHYQGfdvE6tFquD9VvkkKNTzCrRfnfMhUwhQWZG3czSx4QxFdjL
+#  issuer: ZemichCS
+
+
+
+
+
